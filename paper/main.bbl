@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{AH}
+H.~Ando and U.~Haagerup.
+\newblock {Ultraproducts of von Neumann algebras}.
+\newblock \url{https://arxiv.org/abs/1212.5457v3}, 2014.
+
+\bibitem{ChenZhao}
+R.~Chen and Y.~Zhao.
+\newblock {A non-robust quantum correlation self-test}.
+\newblock \url{https://arxiv.org/abs/2609.25117v2}, 2026.
+
+\bibitem{Connes76}
+A.~Connes.
+\newblock {Classification of injective factors: Cases {II$_1$}, {II$_\infty$},
+  {III$_\lambda$}, $\lambda\ne1$}.
+\newblock \url{https://annals.math.princeton.edu/1976/104-1/p04}, 1976.
+
+\bibitem{TypeGames}
+S.~Douglas and N.~Mghirbi.
+\newblock {Finite games that read the type of a von Neumann algebra}.
+\newblock \url{https://doi.org/10.5281/zenodo.23787124}, 2026.
+\newblock Version 1.0.0. Preprint.
+
+\bibitem{Base}
+S.~Douglas and N.~Mghirbi.
+\newblock {Perfect play in a binary-scoring nonlocal game requires infinite
+  dimension but only finite energy}.
+\newblock \url{https://doi.org/10.5281/zenodo.23772890}, 2026.
+\newblock Preprint.
+
+\bibitem{GYZ}
+M.~Gao, T.~Yu, and L.~Zhi.
+\newblock {An explicit counterexample to {Tsirelson}'s problem via a linear
+  system game}.
+\newblock \url{https://arxiv.org/abs/2610.10248v2}, 2026.
+
+\bibitem{GS}
+R.~Grigorchuk and D.~Savchuk.
+\newblock {Self-similar groups acting essentially freely on the boundary of the
+  binary rooted tree}.
+\newblock \url{https://arxiv.org/abs/1212.0605v2}, 2013.
+
+\bibitem{HM}
+U.~Haagerup and M.~Musat.
+\newblock {Classification of hyperfinite factors up to completely bounded
+  isomorphism of their preduals}.
+\newblock \url{https://arxiv.org/abs/0706.3463v2}, 2007.
+
+\bibitem{Halvorson}
+H.~Halvorson.
+\newblock {Algebraic quantum field theory}.
+\newblock \url{https://arxiv.org/abs/math-ph/0602036}, 2006.
+\newblock With an appendix by Michael M{\"u}ger.
+
+\bibitem{Harris}
+S.~J. Harris.
+\newblock {Self-testing for exact entanglement embezzlement}.
+\newblock \url{https://arxiv.org/abs/2605.22713v2}, 2026.
+
+\bibitem{Hiai}
+F.~Hiai.
+\newblock {Concise lectures on selected topics of von Neumann algebras}.
+\newblock \url{https://arxiv.org/abs/2004.02383}, 2020.
+
+\bibitem{MIPRE}
+Z.~Ji, A.~Natarajan, T.~Vidick, J.~Wright, and H.~Yuen.
+\newblock {MIP* = RE}.
+\newblock \url{https://arxiv.org/abs/2001.04383v4}, 2020.
+\newblock Version 4, 2026.
+
+\bibitem{KPS}
+S.-J. Kim, V.~Paulsen, and C.~Schafhauser.
+\newblock {A synchronous game for binary constraint systems}.
+\newblock \url{https://arxiv.org/abs/1707.01016}, 2017.
+
+\bibitem{LRRW}
+M.~Laca, I.~Raeburn, J.~Ramagge, and M.~F. Whittaker.
+\newblock {Equilibrium states on the Cuntz--Pimsner algebras of self-similar
+  actions}.
+\newblock \url{https://arxiv.org/abs/1301.4722v2}, 2014.
+
+\bibitem{LRRWGroupoid}
+M.~Laca, I.~Raeburn, J.~Ramagge, and M.~F. Whittaker.
+\newblock {Equilibrium states on operator algebras associated to self-similar
+  actions of groupoids on graphs}.
+\newblock \url{https://arxiv.org/abs/1610.00343}, 2016.
+
+\bibitem{FMS}
+L.~Man{\v c}inska.
+\newblock {The right entanglement for perfect nonlocality and zero-error
+  communication}.
+\newblock \url{https://arxiv.org/abs/2610.06512}, 2026.
+
+\bibitem{PadSch}
+C.~Paddock and S.~Schmidt.
+\newblock {A commuting operator self-test for exact entanglement embezzlement}.
+\newblock \url{https://arxiv.org/abs/2609.38083v1}, 2026.
+
+\bibitem{PadSlo}
+C.~Paddock and W.~Slofstra.
+\newblock {Satisfiability problems and algebras of boolean constraint system
+  games}.
+\newblock \url{https://arxiv.org/abs/2310.07901v2}, 2025.
+
+\bibitem{Paulsen}
+V.~I. Paulsen.
+\newblock {IML course notes: Traces and commutators}.
+\newblock
+  \url{https://www.mittag-leffler.se/app/uploads/2023/06/IML-notes-Tracesandcommutators.pdf},
+  2026.
+\newblock Problems 2.14 and 2.16.
+
+\bibitem{Slofstra}
+W.~Slofstra.
+\newblock {The set of quantum correlations is not closed}.
+\newblock \url{https://arxiv.org/abs/1703.08618v2}, 2017.
+
+\bibitem{Takesaki}
+M.~Takesaki.
+\newblock {Conditional expectations in von Neumann algebras}.
+\newblock \url{https://doi.org/10.1016/0022-1236(72)90004-3}, 1972.
+
+\bibitem{Yoshida}
+K.~Yoshida.
+\newblock {A von Neumann algebraic approach to self-similar group actions}.
+\newblock \url{https://arxiv.org/abs/1905.03986v3}, 2020.
+
+\end{thebibliography}

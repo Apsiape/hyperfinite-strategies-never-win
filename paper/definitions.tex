@@ -1,0 +1,51 @@
+\section{Definitions and main results}\label{sec:definitions}
+The main phenomenon is non-closedness at perfect play. Finite-dimensional strategies, and hence normal hyperfinite strategies, approach a perfect correlation of an explicit finite game, but no strategy with a normal injective host for either player attains perfection. The perfect correlation itself belongs to $\qa$; this distinguishes the result from commuting-versus-approximate value gaps.
+
+A finite two-player game consists of finite question sets $X,Y$, finite nonempty answer sets $A_x,B_y$, a probability distribution $\pi$ on $X\times Y$, and a predicate $V(a,b\mid x,y)\in\{0,1\}$. For a correlation $p$ its loss is
+\[
+ \ell_G(p)=\sum_{x,y,a,b}\pi(x,y)(1-V(a,b\mid x,y))p(a,b\mid x,y).
+\]
+Perfect play means $\ell_G(p)=0$. Since all summands are nonnegative, it is equivalent to vanishing of every forbidden probability on a supported question pair. The scoring is binary; the answers need not be binary.
+
+A commuting strategy consists of POVMs $A_a^x,B_b^y$ on a Hilbert space and a state on their joint operator algebra, with $[A_a^x,B_b^y]=0$. A specified \emph{Alice host} is a von Neumann algebra $M$ containing her effects, with Bob's effects in the full commutant $M'$ and the marginal state normal on $M$. A smaller commuting partner is allowed. The definition with Bob distinguished exchanges the parties. Normality refers to this specified ambient algebra. It is additional data, beyond the generated measurement algebra.
+
+After passing to the support of the normal marginal, every such strategy has a faithful normal standard-form realization. Write $(M,L^2(M),J,\mathcal P)$ for this standard form and $\xi=\xi_\phi$ for the natural-cone vector of the faithful normal state $\phi$. Then
+\[
+ p(a,b\mid x,y)=\langle\xi,A_a^xB_b^y\xi\rangle,\qquad B_b^y\in M'=JMJ.
+\]
+The reduction preserves POVMs and probabilities, including when the original state is mixed; it need not preserve products of the compressed other-party effects. A proof is given below.
+
+An algebra is \emph{injective} if completely positive maps into it extend across inclusions of operator systems; equivalently it is the range of a norm-one completely positive projection from $B(H)$ in a faithful representation. Injectivity passes to corners, commutants and expected von Neumann subalgebras. For separable predual, injectivity is equivalent to hyperfiniteness by Connes's theorem \cite{Connes76}. The algebras constructed here have separable predual. Our exclusion applies to arbitrary injective ambient hosts, without a separability premise. An expected subalgebra here is the range of a faithful normal conditional expectation.
+
+Let $C_q$ be the finite-dimensional spatial correlation set, $\qa=\overline{C_q}$ its Euclidean closure, $\qs$ the spatial set allowing infinite-dimensional Hilbert spaces, and $C_{qc}$ the commuting set. These sets refer to the full finite correlation array, including unsupported question pairs. Write $\mathcal I_A$, respectively $\mathcal I_B$, for arrays admitting a specified normal injective host for Alice, respectively Bob.
+
+\begin{theorem}[Finite-game separation]\label{thm:main}
+The game $\GB$ of Section~\ref{sec:game} has 561 Alice questions, 157 Bob questions, 3,696 uniformly sampled pairs and at most 20 answers per question. It has a perfect standard-form strategy on
+\[
+ M_9\,\bar\otimes\,M_2\,\bar\otimes\,P,
+\]
+where $P$ is the Bellaterra critical-KMS factor of type $\mathrm{III}_{1/2}$. Its perfect correlation $p_*$ belongs to $\qa$. No perfect strategy admits a normal injective host for either player. Thus the finite-dimensional supremum is one, and $p_*\notin\mathcal I_A\cup\mathcal I_B$.
+\end{theorem}
+The ideal strategy and exact certificate are in Section~\ref{sec:perfect}; the arbitrary-normal extraction is in Section~\ref{sec:forcing}; the two-sided approximation is in Section~\ref{sec:approximation}. Section~\ref{sec:consequences} finishes the exclusion and proves non-closedness of the normal injective-host sets, together with a qualified quantum-field-theory consequence.
+
+The mechanism is finite at its input and infinite at its conclusion. The game forces two isometries with modular eigenvalue $1/2$ and six relations implementing a self-similar group action. Equal cylinder masses then determine every group moment. The resulting expected group algebra is noninjective. The KMS uniqueness mechanism is due to Laca--Raeburn--Ramagge--Whittaker \cite{LRRW}; its use in this explicit finite predicate supplies the separation.
+
+Our type-game construction \cite{TypeGames} forces type III. The present game adds a condition that type III alone does not satisfy: noninjectivity. The flagged magic-square ingredient originates with Man\v cinska \cite{FMS}; the companion finite-energy paper \cite{Base} develops the underlying binary-scoring game. Neither that energy result nor an energy bound for the present game is used here.
+
+\subsection{Comparison and bounded search}
+Earlier commuting-versus-approximate value-gap games already exclude perfect strategies with normal injective hosts, since such correlations belong to $\qa$ by semidiscreteness. Ji--Natarajan--Vidick--Wright--Yuen \cite{MIPRE} established the existence of games with $\omega_{qa}<1=\omega_{qc}$; Gao--Yu--Zhi \cite{GYZ}, Theorems 1.1--1.2, give an explicit linear-system game. The normal injective-host exclusion is our inference from semidiscreteness and these gap results, rather than a formulation attributed to their authors. The distinction here is that perfect play itself lies in $\qa$: normal injective hosts approximate the perfect correlation but cannot attain perfection.
+
+For completeness, let $M$ be a normal injective host in the standard form above. Semidiscreteness gives unital completely positive maps $\alpha_i:M\to M_{n_i}$ and $\beta_i:M_{n_i}\to M$ with $\beta_i\alpha_i\to\mathrm{id}_M$ pointwise ultraweakly. The positive normal functionals $\omega_{y,b}(x)=\langle\xi,xB_b^y\xi\rangle$ sum to the same normal state $\phi$ for every $y$. The functionals $\omega_{y,b}\circ\beta_i$ therefore form finite-dimensional assemblages with common density matrix. Bob can realize them by POVMs on a purification of that matrix, while Alice uses $\alpha_i(A_a^x)$. Their correlations converge to the original full array, proving membership in $\qa$. The same argument applies with Bob distinguished.
+
+Slofstra's Theorem 1.1 \cite{Slofstra} already gives a finite game with perfect $\qa$ play and no perfect spatial play. Kim--Paulsen--Schafhauser's Corollary 3.7 \cite{KPS} characterizes synchronous perfect approximate play by representations in $R^\omega$ and amenable traces. Such an ultrapower is different from a normal injective host. The Boolean constraint-system framework of Paddock--Slofstra \cite{PadSlo} provides broader algebraic reductions.
+
+Harris's Theorem 4.9 \cite{Harris} identifies injective factors arising from exact embezzlement. Paddock--Schmidt's Theorem 1.1 and Corollary 4.6 \cite{PadSch} give a generalized-game self-test in $\qa\setminus\qs$, using the embezzlement model. Chen--Zhao's Theorem 1.4 \cite{ChenZhao} encodes real finitely presented tracial algebras into binary correlations. Prescribed nonzero probabilities are data beyond the forbidden-event face of a game; their theorem does not directly encode this nontracial Cuntz presentation.
+
+Before writing this account, we searched combinations of finite game, nonlocal game, normal, injective, hyperfinite, exact attainment, nonamenable and compiler, and inspected the primary statements just cited. For the conjunction in Theorem~\ref{thm:main}, no earlier version found in a bounded search is the extent of our priority conclusion. The search does not prove absence of an earlier construction.
+
+\begin{lemma}[Normal support reduction; \cite{TypeGames}, Lemma 1.6]\label{lem:support}
+Every commuting strategy whose specified marginal is normal has a faithful normal standard-form realization on its support corner, preserving all correlations.
+\end{lemma}
+\begin{proof}
+Take the joint GNS representation with vector $\psi$. For the marginal support $s$, $s\psi=\psi$ and the other party commutes with $s$. Replace Alice's effects by $sAs$ in $M=sNs$. The map $x\xi_\phi\mapsto x\psi$ is an isometry from $L^2(M,\phi)$ onto $\overline{M\psi}$. This subspace reduces $M$. Compressing Bob's effects through that isometry gives positive effects summing to one and commuting with the left $M$ action. Their matrix coefficients with $\xi_\phi$ preserve the joint probabilities. The support marginal is faithful and normal.
+\end{proof}

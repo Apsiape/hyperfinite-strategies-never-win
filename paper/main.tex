@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\hypersetup{pdftitle={A finite game that normal hyperfinite strategies approach but never win},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\un}{\mathbf1}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\GIII}{G_{\mathrm{III}}}
+\newcommand{\GB}{G_{\mathrm B}}
+\newcommand{\Gam}{\Gamma}
+\newcommand{\qa}{C_{qa}}
+\newcommand{\qs}{C_{qs}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\title{A finite game that normal hyperfinite\\strategies approach but never win\thanks{The authors developed this work with AI models from more than one developer and take responsibility for every claim. How the work was done, and what the machine checks cover, is described at the end of the paper.}}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We exhibit non-closedness at perfect play for normal injective hosts: an explicit finite two-player game with 0/1 scoring has a perfect commuting-operator correlation approached by finite-dimensional quantum correlations, while no perfect strategy has a normal marginal on an injective von Neumann algebra of either player. The game has 561 Alice questions, 157 Bob questions, 3,696 sampled pairs and at most 20 answers per question. Perfect play is realized on a matrix amplification of the Bellaterra critical-KMS factor of type III with parameter 1/2. After restricting to the support of the chosen normal marginal, every perfect strategy yields a modular Cuntz pair and six self-similar relations that force the canonical trace on the free product of three groups of order two. The resulting noninjective group von Neumann algebra is an expected subalgebra of that support corner, with a faithful normal state-preserving expectation. A two-sided POVM lift through a matrix ultraproduct proves approximation by finite systems. Consequently correlations admitting normal injective hosts are not closed. Under the explicit hypotheses of Halvorson's Proposition 2.31, locally normal quantum-field-theory strategies cannot win exactly. We also formulate a KMS-face criterion for complete modular presentations. Exact arithmetic certificates check every supported losing event; the forcing proof applies to arbitrary normal strategies.
+\end{abstract}
+\input{definitions}
+\input{rigidity}
+\input{game}
+\input{perfect}
+\input{forcing}
+\input{approximation}
+\input{consequences}
+\input{criterion}
+\input{discussion}
+\bibliographystyle{abbrv}
+\bibliography{references}
+\end{document}

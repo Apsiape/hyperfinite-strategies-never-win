@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "independent_of_compiler": true,
+  "human_definition": "game definition and base-game definition",
+  "seed": 336906185362330768646873192451346372926,
+  "sample_size": 512,
+  "sample_forbidden_events": 12537,
+  "all_pairs_checked": 3696,
+  "all_forbidden_events": 90630,
+  "alice_questions": 561,
+  "bob_questions": 157,
+  "schema_outcome_sets_checked": 718,
+  "mutation_test_passed": true,
+  "source_sha256": "a5b6153d95bc636bc195fa82757c19fa18e507637f46b8efb3c98cb84943f774",
+  "elapsed_seconds": 0.509
+}

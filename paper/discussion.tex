@@ -1,0 +1,15 @@
+\section{Open problems and how this work was done}\label{sec:discussion}
+A smaller predicate is a natural next target. The present count reflects the use of the same nine label contexts on all five base questions and the explicit conditional blocks. Which of these tests can be shared without losing the common-marginal argument?
+
+A quantitative question is the price of nearly perfect injective play. The present result gives no robustness rate. One could seek bounds in terms of dimension, entropy, modular spectral concentration or approximation complexity, together with matching constructions.
+
+The tracial analogue remains separate. Paulsen's Problems 2.14 and 2.16 \cite{Paulsen} distinguish uniformly amenable trace correlations and ask about amenability after passing to a game quotient. Our modular-cylinder method does not resolve those problems. It uses a nontracial state and a forced Cuntz scaling that a finite trace cannot support.
+
+More generally, which nonamenable von Neumann algebras can a finite game force with expectation? Can the present label transport be made robust, or strengthened to self-testing? The result does not identify a unique perfect correlation or classify every perfect host. Its quantum-field-theory consequence is the conditional one in Corollary~\ref{cor:qft}; no energy or preparation bound is derived.
+
+\subsection*{How this work was done}
+The authors developed the construction and its proofs with assistance from AI models from more than one developer. They take responsibility for every claim. The analytic inputs are identified where used, including the base support and bridge lemmas, critical-KMS uniqueness, essential freeness, modular expectations and matrix-ultraproduct standard forms.
+
+The ancillary programs provide two kinds of evidence. The exhaustive exact checker proves finite algebraic zero identities for the specified ideal operators on every supported forbidden event, together with the POVM and extraction identities. The independent predicate program reconstructs the complete finite rules, and a separately implemented operator program checks the recorded random sample by a different rewriting method. Recorded logs state their coverage and resource measurements. These checks use exact rational-pair arithmetic; they do not infer infinite-dimensional identities from finite-depth numerical matrices.
+
+The argument for arbitrary normal strategies is the analytic proof in Section~\ref{sec:forcing}. The approximation proof is the two-sided normalization and reducing-support argument in Theorem~\ref{thm:C}. Neither conclusion follows from a computational pass alone. The source distribution contains the game, programs, recorded outputs, a runner that stops on a failed check, and an LF-encoded SHA-256 manifest. Run \texttt{python -u anc/run\_checks.py --output-dir CHECK\_DIRECTORY} from the paper directory, choosing a fresh directory outside the ancillary source tree. Assertions must remain enabled.

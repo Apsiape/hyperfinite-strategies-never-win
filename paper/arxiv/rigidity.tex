@@ -1,0 +1,44 @@
+\section{Modular contraction and an expected group algebra}\label{sec:rigidity}
+Use $\sigma_t^\phi(x)=\Delta_\phi^{it}x\Delta_\phi^{-it}$. An $r$-eigenoperator satisfies $\sigma_t^\phi(x)=r^{it}x$. Our analytic KMS convention is
+\begin{equation}\label{eq:kms}
+ \phi(xy)=\phi\bigl(y\sigma_{-i}^\phi(x)\bigr).
+\end{equation}
+It agrees with the modular convention in Hiai's Theorem 2.14 \cite{Hiai}. The centralizer $M_\phi$ is the fixed algebra of this modular group.
+
+Let $\Gam=C_2*C_2*C_2=\langle a,b,c\mid a^2=b^2=c^2=1\rangle$. The Bellaterra action on binary words has recursions
+\[
+ a=\mathrm{swap}(c,c),\qquad b=(a,b),\qquad c=(b,a).
+\]
+The generator $a$ exchanges the first bit and has section $c$ on both bits; $b,c$ preserve that bit and have the indicated sections. Grigorchuk--Savchuk's Theorem 1.1 identifies the group and essential freeness of this action; their Proposition 3.9 gives the bireversible-automaton criterion \cite{GS}. Essential freeness means that each nonidentity group element fixes a Bernoulli-null subset of the binary boundary.
+
+\begin{theorem}[Modular contraction]\label{thm:A}
+Let $(M,\phi)$ have a faithful normal state. Suppose $S_0,S_1$ are Cuntz isometries with $\sigma_t^\phi(S_x)=2^{-it}S_x$, and $U_a,U_b,U_c\in M_\phi$ are self-adjoint unitaries satisfying
+\begin{equation}\label{eq:six}
+\begin{aligned}
+ U_aS_0&=S_1U_c,& U_aS_1&=S_0U_c,\\
+ U_bS_0&=S_0U_a,& U_bS_1&=S_1U_b,\\
+ U_cS_0&=S_0U_b,& U_cS_1&=S_1U_a.
+\end{aligned}
+\end{equation}
+Then $\phi(U_g)=\delta_{g,e}$ for every $g\in\Gam$. The algebra $W^*(U_a,U_b,U_c)$ is a copy of $L(\Gam)$ and is the range of a faithful normal $\phi$-preserving expectation from $M$. In particular $M$ is noninjective.
+\end{theorem}
+\begin{proof}
+For a word $\mu$ set $R_\mu=S_\mu S_\mu^*$. Equation~\eqref{eq:kms} gives
+\[
+ \phi(S_xzS_x^*)=\tfrac12\phi(z).
+\]
+Thus the level-$n$ cylinder projections partition one, belong to $M_\phi$ and have mass $2^{-n}$. Iterating \eqref{eq:six} gives $U_gR_\mu U_g^*=R_{g\cdot\mu}$.
+
+For a centralizer projection $R$, $\phi(Rz)=\phi(RzR)$: the complementary term is zero after moving $R$ across the state. Therefore
+\[
+ \phi(U_g)=\sum_{|\mu|=n}\phi(R_\mu U_gR_\mu),\qquad
+ |\phi(U_g)|\le 2^{-n}\#\{\mu:g\cdot\mu=\mu\}.
+\]
+A nonfixed diagonal block vanishes by orthogonality of the cylinders. A fixed block has absolute expectation at most $\phi(R_\mu)$, by Cauchy--Schwarz. The fixed fractions decrease to the boundary measure of $\Fix(g)$. Essential freeness makes this zero for $g\ne e$.
+
+The restricted faithful normal state consequently has the regular group moments. Its GNS representation sends $U_g\xi$ to $\delta_g$, identifying $N=W^*(U_a,U_b,U_c)$ with $L(\Gam)$. There is no group-quotient ambiguity: collapsing a nonidentity $g$ would make $\phi(U_g)=1$. The algebra $N$ is pointwise modularly fixed. Takesaki's expectation theorem, in the formulation of Hiai's Theorem 6.6 \cite{Takesaki,Hiai}, yields a normal $\phi$-preserving expectation $M\to N$. Faithfulness follows from that of $\phi$.
+
+For completeness, $L(\Gam)$ is noninjective. Were it injective, a conditional expectation $B(\ell^2\Gam)\to L(\Gam)$, followed by the regular trace and restricted to diagonal multiplication operators, would give a left-invariant mean on $\ell^\infty(\Gam)$. Bimodularity under the left regular unitaries gives invariance. But the even-word index-two subgroup of $\Gam$ is the free group on $ab,ac$, and is nonamenable. Finally an expected subalgebra of an injective algebra is injective, by composition of completely positive extensions. This contradicts injectivity of $M$.
+\end{proof}
+
+This cylinder argument is the critical-KMS uniqueness mechanism of Laca--Raeburn--Ramagge--Whittaker. Their Theorem 7.3(2)--(3) \cite{LRRW} gives the canonical state and uniqueness when every element has finitely many sections. That hypothesis holds here: sections of a word of length $k$ are represented by words of length at most $k$. Contracting is unnecessary. Their later groupoid treatment \cite{LRRWGroupoid} gives a broader setting. The expected noninjective-subalgebra conclusion above is the consequence needed for arbitrary hosts.

@@ -1,0 +1,26 @@
+\section{Exclusion, non-closedness and local quantum fields}\label{sec:consequences}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The predicate and counts are established in Section~\ref{sec:game}. Sections~\ref{sec:perfect} and \ref{sec:approximation} give its perfect standard-form correlation $p_*\in\qa$ on $M_9\bar\otimes M_2\bar\otimes P$.
+
+If Alice's specified ambient host is injective and her marginal normal, Lemma~\ref{lem:support} passes to an injective faithful support corner. Section~\ref{sec:forcing} gives the hypotheses of Theorem~\ref{thm:A} in that corner. Its expected $L(\Gam)$ contradicts injectivity.
+
+Now suppose only Bob's specified host $B$ is injective and his marginal normal. Apply Lemma~\ref{lem:support} with Bob distinguished. On the standard form of its injective support corner $B_s$, Alice's compressed POVMs belong to the full commutant $B_s'$. This commutant is the standard opposite of $B_s$, hence injective. The natural-cone vector is cyclic and separating on both sides, so its restriction to $B_s'$ is faithful and normal. Regard $B_s'$ as Alice's host and apply the preceding argument. All probabilities were preserved by the support reduction. This proves exclusion for either distinguished party.
+
+Every finite-dimensional strategy has a normal type-I, hence injective, host. The convergence to $p_*$ proves that their winning probabilities have supremum one. No individual injective-host strategy attains it.
+\end{proof}
+
+\begin{corollary}[Non-closedness]\label{cor:nonclosed}
+The sets $\mathcal I_A$, $\mathcal I_B$, their union and their intersection are not closed. Also $p_*\in\qa\setminus\qs$.
+\end{corollary}
+\begin{proof}
+Choose $p_n\in C_q$ converging to $p_*$. Each belongs to both normal injective-host sets, whereas the limit belongs to neither. Every spatial strategy, including an infinite-dimensional one, is normal on the ambient type-I algebra $B(H_A)\otimes1$, using its vector state or density operator. It therefore cannot realize $p_*$.
+\end{proof}
+This proof requires no identification of the entire closure of $\mathcal I_A$ or $\mathcal I_B$. The assertion concerns exact attainment. Since the same sequence has loss tending to zero, there is no uniform positive loss bound for injective hosts.
+
+\begin{corollary}[A specified quantum-field-theory setting]\label{cor:qft}
+Let two spacelike separated regions carry Alice's and Bob's measurements. If one specified local von Neumann algebra is injective and the strategy's marginal is normal there, the strategy cannot win $\GB$ perfectly. In particular this applies to locally normal strategies for double cones in the setting of Halvorson's Proposition 2.31 \cite{Halvorson}.
+\end{corollary}
+\begin{proof}
+Microcausality puts the other region's effects in the specified local commutant, giving a forbidden normal injective host. The named sufficient setting assumes microcausality, the spectrum condition, the funnel property and construction from a Wightman theory satisfying asymptotic scale invariance in Halvorson's Definition 2.30. Proposition 2.31 concludes that each double-cone algebra is the hyperfinite type $\mathrm{III}_1$ factor tensored with its abelian center. That tensor product is injective, so the preceding argument applies.
+\end{proof}
+The asymptotic scale-invariance assumption has specific content. In Definition 2.30 a generating Wightman field with vanishing vacuum one-point function admits a monotone normalization $N(\lambda)$ and rescaled test functions $f_\lambda(x)=N(\lambda)f(\lambda^{-1}x)$. Its two-point expectations converge as $\lambda\to0$, nontrivially for some test function, while both $\|\Phi(f_\lambda)^*\Phi(f_\lambda)\Omega\|$ and $\|\Phi(f_\lambda)\Phi(f_\lambda)^*\Omega\|$ stay bounded. The corollary uses that numbered formulation; the historical attribution to Buchholz--D'Antoni--Fredenhagen is through Halvorson's statement. It asserts no conclusion for all quantum-field-theory nets, singular local states or noninjective local algebras.

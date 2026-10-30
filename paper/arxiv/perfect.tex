@@ -1,0 +1,81 @@
+\section{Perfect play and the exact certificate}\label{sec:perfect}
+Section~\ref{sec:approximation} constructs a faithful normal pair $(P,\varphi)$ with Cuntz generators $T_0,T_1$ of modular eigenvalue $1/2$ and centralizer involutions $U_a,U_b,U_c$ satisfying \eqref{eq:six}. It also identifies $P$ as the Bellaterra critical-KMS factor. For the present construction use
+\[
+ (M,\phi)=(M_9\bar\otimes M_2\bar\otimes P,
+                 \tr_9\otimes\tr_2\otimes\varphi).
+\]
+The auxiliary $M_2$ is suppressed where it acts trivially. Write $F_j=e_{jj}\otimes1$. For $1\le k\le4$ put $p=j+2k-1$ and
+\begin{equation}\label{eq:Vk}
+ V_0=F_j,\qquad
+ V_k=e_{p,j}\otimes T_0^*+e_{p+1,j}\otimes T_1^*.
+\end{equation}
+For each fixed copy $j$, these five partial isometries have initial projection $F_j$ and orthogonal final projections summing to one. Hence $E_{kl}=V_kV_l^*$ are unital five-by-five matrix units. The four nonflag corners are centralizer matrix units; $V_k$ for $k>0$ has modular eigenvalue two.
+
+For clarity, the real magic-square convention on the four-dimensional core is
+\[
+ \begin{pmatrix}
+ X\otimes I&I\otimes X&X\otimes X\\
+ I\otimes Z&Z\otimes I&Z\otimes Z\\
+ X\otimes Z&Z\otimes X&Y\otimes Y
+ \end{pmatrix},
+\]
+where $X,Y,Z$ are the Pauli matrices. Its row and column eigenspaces define the four ordinary outcomes; append the flag vector $f$. The calibrated rays are
+\[
+ c_0=(1,0,1,0)/\sqrt2,\quad c_1=(0,1,0,1)/\sqrt2,
+\]
+\[
+ r_0=(1,1,1,1)/2,\quad r_1=(1,-1,1,-1)/2.
+\]
+Use the two rays $(f\pm c_x)/\sqrt2$ on $T_x$ and $(f\pm r_y)/\sqrt2$ on $U_y$, with the three residual magic rays. Embed each real five-by-five projector $Q$ as $\sum Q_{kl}E_{kl}$. This defines all base effects. Bob's base effects are their standard-form mirrors; his flag effects are $JF_jJ$.
+
+For a corner operator $l$ define
+\[
+ L_j(l)=\sum_{k=0}^4 V_k(F_jl)V_k^*.
+\]
+Set
+\begin{equation}\label{eq:ideal-labels}
+\begin{aligned}
+ X_j&=L_j(T_0T_1^*+T_1T_0^*),\\
+ Z_j&=L_j(T_0T_0^*-T_1T_1^*),\qquad Y_q^j=L_j(U_q).
+\end{aligned}
+\end{equation}
+These are centralizer involutions commuting with the copy's five-by-five matrix units and thus with all its base effects. Let $a=X_j$, $b=X_{\rm aux}$, $c=Z_{\rm aux}$ and $d=Z_j$. Complete the auxiliary square by
+\begin{equation}\label{eq:auxsquare}
+ \begin{pmatrix}a&b&ab\\c&d&cd\\ac&bd&acbd\end{pmatrix}.
+\end{equation}
+The two Pauli pairs anticommute within pairs and commute across pairs, giving the required row and column products. Every label is degree zero for the modular action.
+
+On $C_j=F_{j+1}+F_{j+2}$ these operators satisfy
+\[
+ X_j=e_{j+1,j+2}+e_{j+2,j+1},\qquad Z_j=F_{j+1}-F_{j+2},
+\]
+with the equalities interpreted after restriction to $C_j$. Also $Y_q^jF_j=U_qF_j$, and
+\[
+\begin{aligned}
+ Y_b^jC_j&=F_{j+1}U_a+F_{j+2}U_b,\\
+ Y_c^jC_j&=F_{j+1}U_b+F_{j+2}U_a,\\
+ Y_a^jC_j&=X_jU_cC_j.
+\end{aligned}
+\]
+The conditional variables commute on their tested blocks. Alice uses the products of the commuting spectral projections specified by each context, and the off-block complement. For $(Q,t)$ multiply each base effect by the context spectral projection. Bob uses $JBJ$ for the corresponding self-adjoint left effect $B$. This gives every ideal question in the finite table.
+
+\begin{proposition}[Exact winning certificate]\label{prop:certificate}
+The stated operators define a perfect strategy for $\GB$. The ancillary exact checker certifies this using finite algebraic identities over $\Q(\sqrt2)$.
+\end{proposition}
+\begin{proof}
+Every effect in this model is analytic. For a self-adjoint analytic $B$, Tomita's identity gives
+\begin{equation}\label{eq:tomita}
+ JBJ\xi=\sigma_{-i/2}^\phi(B)\xi.
+\end{equation}
+A monomial $T_\mu U_gT_\nu^*$ of degree $d=|\mu|-|\nu|$ acquires the coefficient $2^{-d/2}$ in this half-translation. Therefore it suffices for every forbidden event to prove
+\begin{equation}\label{eq:losing}
+ A\sigma_{-i/2}^\phi(B)=0.
+\end{equation}
+Indeed its expectation on $\xi$ is exactly the forbidden probability.
+
+The program \texttt{compile\_and\_check.py} constructs all effects, proves self-adjointness, idempotence and completeness of every question, and proves \eqref{eq:losing} for every supported forbidden event. Its coefficients are pairs of rational numbers representing $\Q(\sqrt2)$. Its monomials are matrix entries times $T_\mu U_gT_\nu^*$, using the two prefix-comparison multiplication identities in Laca--Raeburn--Ramagge--Whittaker's Lemma 3.4 \cite{LRRW}. Group words cancel only adjacent equal generators. To certify zero, it expands annihilation suffixes to a common length using the Cuntz partition and cancels identical monomials. Each reported zero thus has a finite derivation from the stated relations; completeness of the zero test is not required.
+
+Cyclic flag translation reduces 718 question checks to 86 POVM templates and 3,696 pair checks to 672 pair templates. All 90,630 forbidden-event occurrences are covered by 19,014 representative losing-product reductions. The same program checks the extracted Cuntz identities and all six recursions. These verified identities, together with the existence of $(P,\varphi)$, prove perfect play.
+\end{proof}
+
+The independent predicate checker transcribes the human rules without importing the compiler or its operator engine. It compares all answer sets and all 3,696 supported pairs, and detects a deliberately deleted forbidden event. A separate ideal checker uses adjacent generator rewriting and independent outer-product formulas. On the recorded 512-pair sample it proves all 12,537 losing identities and checks the 485 measurements that occur there. The sample is reproducible from its recorded seed; it is not a second exhaustive ideal check. An action diagnostic additionally performs 91,840 finite comparisons. These finite certificates establish the ideal realization. They do not establish the arbitrary-strategy extraction in the next section.

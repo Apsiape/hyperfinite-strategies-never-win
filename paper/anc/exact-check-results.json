@@ -1,0 +1,17 @@
+{
+  "pvm_templates": 86,
+  "povm_questions": 718,
+  "pair_templates": 672,
+  "pairs": 3696,
+  "forbidden_events": 90630,
+  "losing_products": 19014,
+  "peak_working_set_bytes": 381845504,
+  "peak_commit_bytes": 374697984,
+  "elapsed_seconds": 56.053,
+  "status": "PASS",
+  "exact": true,
+  "finite_truncation_used": false,
+  "arithmetic": "Q(sqrt(2)), Fraction",
+  "proof_rule": "A sigma_{-i/2}(B) = 0 in the self-similar Cuntz algebra",
+  "game_sha256": "a5b6153d95bc636bc195fa82757c19fa18e507637f46b8efb3c98cb84943f774"
+}

@@ -1,0 +1,40 @@
+\section{A nontracial dividing line}\label{sec:criterion}
+The mechanism suggests a general criterion, provided a presentation recovers both parties. An abstract presentation of Alice's extracted algebra alone is insufficient for this purpose.
+
+\begin{definition}[Complete modular presentation]\label{def:complete}
+For a finite game, a complete modular presentation consists of a unital $C^*$-dynamical algebra $(\mathcal B,\gamma)$ and analytic POVM families $(a_{x,a})$, $(b_{y,b})$ in $\mathcal B$, with the following properties. Every perfect normal strategy, after faithful support reduction, yields a unital representation $\pi:\mathcal B\to M$ with
+\[
+ \pi(\gamma_t(z))=\sigma_t^\phi(\pi(z)),\qquad
+ p(a,b\mid x,y)=\langle\xi,\pi(a_{x,a})J\pi(b_{y,b})J\xi\rangle.
+\]
+Conversely the prescribed standard-form families define the game strategy in every admissible KMS-GNS representation. Admissible states are the KMS states with the sign convention \eqref{eq:kms}, whose GNS vector is separating and whose modular group implements $\gamma$. Equivalently one may use their usual finite-temperature KMS-GNS formulation, with that sign convention.
+\end{definition}
+The recovery of the displayed probabilities is part of completeness. Merely recognizing the relations among Alice's measurements does not imply it. The forward representation is unital in the faithful support host, so its von Neumann closure is globally modularly invariant.
+
+For such states define the zero-loss subset $K_G$ by the finite equations
+\begin{equation}\label{eq:face}
+ \psi\bigl(a_{x,a}\gamma_{-i/2}(b_{y,b})\bigr)=0
+ \quad\text{whenever }\pi(x,y)>0, V(a,b\mid x,y)=0.
+\end{equation}
+The left sides are affine functionals of $\psi$. In the standard form they are probabilities by \eqref{eq:tomita}; hence they are real and nonnegative on the admissible KMS state space. Their common zero set is therefore a face. Write $\pi_\psi(\mathcal B)''$ for the GNS closure.
+
+\begin{theorem}[The KMS-face criterion]\label{thm:E}
+For a complete modular presentation, a perfect normal strategy exists exactly when $K_G$ is nonempty. A perfect strategy with a normal injective host exists exactly when $K_G$ contains a state whose GNS closure is injective.
+\end{theorem}
+\begin{proof}
+A perfect normal strategy yields $\psi=\phi\circ\pi$. Modular covariance and the faithful normal modular KMS characterization \cite[Theorem 2.14]{Hiai} place this state in the admissible class. Completeness recovers both families, so its zero forbidden probabilities are exactly \eqref{eq:face}. The algebra $N=\pi(\mathcal B)''$ is modularly invariant in $M$, and Takesaki's theorem gives a state-preserving expectation $M\to N$. The faithful normal restriction identifies $N$ with the GNS closure of $\psi$. If $M$ is injective, so is $N$.
+
+Conversely, take $\psi\in K_G$ and its prescribed GNS standard form. The two analytic POVM families and their mirrors have the probabilities in \eqref{eq:face}. All forbidden probabilities vanish, so they win. If the GNS closure is injective, this standard form itself is the required normal injective host.
+\end{proof}
+This is a criterion under a completeness hypothesis, not a claim that every finite game has such a presentation.
+
+\begin{proposition}[Essentially free self-similar models]\label{prop:amenable}
+For a countable essentially free self-similar action on an alphabet of size $d\ge2$, its canonical critical-KMS GNS algebra is injective if and only if the group is amenable. For a game forcing the corresponding modular self-similar relations, the same equivalence for perfect injective play holds provided the canonical state is a perfect model of the game's complete presentation.
+\end{proposition}
+\begin{proof}
+Replace $2^{-n}$ by $d^{-n}$ in the cylinder proof of Theorem~\ref{thm:A}. It gives an expected regular group von Neumann algebra in every faithful normal realization. A nonamenable group therefore excludes injective hosts. For the amenable direction, essential freeness and countability imply full-measure genericity exactly as in Section~\ref{sec:approximation}. Yoshida's Proposition 4.2 \cite{Yoshida} makes the canonical GNS algebra AFD, hence injective; his Theorem 4.1 gives its type. The perfect-model premise puts this state in $K_G$, and Theorem~\ref{thm:E} supplies the strategy. Extra game constraints could otherwise make $K_G$ empty, so the premise is necessary.
+\end{proof}
+
+\begin{remark}[Nuclear presentations]
+The usual nuclearity--injectivity implication makes the GNS closures of a nuclear presentation injective. A further universality argument is often available by selecting a perfect factor fiber and transferring its strategy to the hyperfinite type $\mathrm{III}_1$ factor. The relevant absorption statement is Haagerup--Musat's Lemma 3.8 \cite{HM}: for a hyperfinite \emph{factor} $N$ with separable predual, $N\bar\otimes R_\infty\cong R_\infty$. It does not assert this for arbitrary algebras with center. We record this additional universality route only as a sketch; neither a general factor-selection theorem for modular presentations nor that route is needed for $\GB$.
+\end{remark}

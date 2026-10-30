@@ -1,0 +1,65 @@
+\section{The Bellaterra model and finite-dimensional approximation}\label{sec:approximation}
+\subsection{An expected matrix-ultraproduct model}
+Let $H_L$ have orthonormal basis the binary words of lengths at most $L$. Let $t_x$ prepend $x$, killing the top level, and let $u_q$ be the Bellaterra permutation on each level. Put
+\[
+ \rho_L\delta_w=\frac{2^{-|w|}}{L+1}\delta_w,\qquad
+ \phi_L(z)=\operatorname{Tr}(\rho_Lz).
+\]
+Each level has state mass $1/(L+1)$. Writing $\Pi_k$ for its projection, direct action on basis words gives
+\begin{equation}\label{eq:truncation}
+\begin{aligned}
+ \rho_Lt_x&=\tfrac12t_x\rho_L,&[\rho_L,u_q]&=0,\\
+ u_qt_x&=t_{q\cdot x}u_{q|x},&u_q^2&=1,\\
+ t_x^*t_y&=\delta_{xy}(1-\Pi_L),&
+ \sum_xt_xt_x^*&=1-\Pi_0.
+\end{aligned}
+\end{equation}
+These are exact finite-level identities, not approximate operator-norm relations.
+
+Fix a free ultrafilter $\omega$ and let
+\[
+ \mathcal O=(B(H_L),\phi_L)^\omega
+\]
+be the Ocneanu ultraproduct. We use the following numbered imports from Ando--Haagerup \cite{AH}. Proposition 3.2 makes its state faithful and normal. Lemma 4.13 puts bounded sequences with a common bounded modular spectral window into the normalizer algebra. Theorem 4.1 identifies the modular group coordinatewise. Proposition 3.15 characterizes normalizer representatives by commutation with the vector-state support in the Groh--Raynaud algebra. Corollaries 3.27--3.28 identify its standard form on the double-support compression.
+
+The shifts and permutations in \eqref{eq:truncation} have fixed modular spectral support. Their images $T_x,U_q$ therefore exist in $\mathcal O$, with eigenvalues $1/2$ and one. Both boundary projections have state mass $1/(L+1)$; they vanish in the strong-star ideal. Their images satisfy the exact Cuntz and Bellaterra relations. The algebra
+\[
+ P=W^*(T_0,T_1,U_a,U_b,U_c)\subset\mathcal O
+\]
+is globally modularly invariant. Takesaki's theorem gives a faithful normal state-preserving expectation $\mathcal O\to P$.
+
+Theorem~\ref{thm:A} and the KMS identity determine every normal-form moment:
+\begin{equation}\label{eq:moments}
+ \varphi(T_\mu U_gT_\nu^*)
+       =\delta_{\mu,\nu}\,2^{-|\mu|}\delta_{g,e}.
+\end{equation}
+Different degrees vanish by modular invariance. For equal lengths, move $T_\mu$ using \eqref{eq:kms} and apply $T_\nu^*T_\mu=\delta_{\nu,\mu}$. The multiplication rules in \cite[Lemma 3.4]{LRRW} show that these words span a dense star algebra. The state is thus fully identified.
+
+To identify the factor type, the Bellaterra action is countable and essentially free. In Yoshida's Definition 2.6 \cite{Yoshida}, a nongeneric point for $g$ must be fixed by $g$. The identity is generic everywhere; for all other elements the fixed set is null. Countability gives full measure to the set generic for every element. Yoshida's Theorem 3.13 identifies the unique critical state on the maximal self-similar algebra, and Theorem 4.1 makes its GNS closure a type $\mathrm{III}_{1/2}$ factor. Formula~\eqref{eq:moments} identifies our $(P,\varphi)$ with that state and closure. The type computation is additional information; noninjectivity already follows from Theorem~\ref{thm:A}.
+
+\subsection{POVM lifting on both sides}
+\begin{theorem}[Two-sided approximation]\label{thm:C}
+For every fixed $k$ and every finite pair of POVM families, the standard-form correlation of $(M_k\bar\otimes P,\tr_k\otimes\varphi)$ belongs to $\qa$. In particular the full perfect correlation of Section~\ref{sec:perfect} belongs to $\qa$.
+\end{theorem}
+\begin{proof}
+First work in $\mathcal O$. Let $\mathcal Q$ be the $C^*$-algebra of bounded normalizer sequences and $\pi:\mathcal Q\to\mathcal O$ its quotient map. A finite POVM $(c_i)$ in $\mathcal O$ has positive lifts $d_i\in\mathcal Q$: lift $c_i^{1/2}$ and take the product of its adjoint with itself. Put
+\[
+ s=\sum_i d_i,\qquad r=\max(s,\tfrac12\un),\qquad
+ f_i=r^{-1/2}d_ir^{-1/2}.
+\]
+Continuous functional calculus stays in $\mathcal Q$. Since $r$ commutes with $s$ and dominates it, $h=1-\sum_i f_i\ge0$ coordinatewise. Also $\pi(s)=\pi(r)=1$, so $\pi(h)=0$. Replace $f_1$ by $f_1+h$. We have obtained coordinatewise positive effects summing exactly to one, with images $c_i$.
+
+Apply this to every Alice POVM and also to each left POVM $c_{y,b}=J_{\mathcal O}B_b^yJ_{\mathcal O}$ associated with Bob's commutant POVM. Denote the coordinate lifts by $a_{x,a,L},c_{y,b,L}$. Both families are normalizer representatives; normalization on one side does not constrain the other.
+
+Let $N$ be the Groh--Raynaud algebra on the Hilbert ultraproduct, $\Omega=(\rho_L^{1/2})_\omega$, $p$ the support of its vector state in $N$, and $J_\omega$ the coordinatewise modular conjugation. Put $q=pJ_\omega pJ_\omega$. Proposition 3.15 says each normalizer representative $x$ commutes with $p$. It also commutes with $J_\omega pJ_\omega\in N'$. Thus it commutes with $q$, as does $J_\omega xJ_\omega$. The projection $q$ reduces both lifted families and $q\Omega=\Omega$.
+
+Corollaries 3.27--3.28 identify the standard form of $\mathcal O$ with this compression. Since the compression is reducing on both sides, its projections can be removed from the product, giving exactly
+\begin{equation}\label{eq:ultralimit}
+ \langle\xi_{\mathcal O},aJ_{\mathcal O}cJ_{\mathcal O}\xi_{\mathcal O}\rangle
+ =\lim_\omega\langle\rho_L^{1/2},a_LJ_Lc_LJ_L\rho_L^{1/2}\rangle.
+\end{equation}
+Removing arbitrary nonreducing compressions would not give this identity. Each coordinate on the right is a finite-dimensional spatial strategy: $L^2(B(H_L))=H_L\otimes\overline{H_L}$, with left and right matrix actions. For any accuracy the finitely many probability constraints select an intersection of finitely many ultrafilter-large sets. Choosing one coordinate in that intersection approximates the entire correlation array. This proves membership in $\qa$.
+
+For the passage from $P$ to $\mathcal O$, use the expectation and \cite[Lemma 3.1]{TypeGames}: $K=\overline{P\xi_{\mathcal O}}$ identifies with $L^2(P,\varphi)$, and modular invariance gives $J_{\mathcal O}|_K=J_P$. Embedding the left effects in $\mathcal O$ and mirroring the right effects with $J_{\mathcal O}$ preserves every probability. Finally tensor the coordinates and expectation with $M_k$. The same argument proves the assertion for every fixed matrix amplification.
+\end{proof}
+This approximation includes unsupported pairs. It is stronger than convergence of the winning score alone. The finite Toeplitz models supply existence and approximation; they are not used as finite cutoffs for the exact zero identities in Proposition~\ref{prop:certificate}.

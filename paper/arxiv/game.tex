@@ -1,0 +1,55 @@
+\section{The finite predicate}\label{sec:game}
+\subsection{The inherited flagged game}
+We give the base rules explicitly to fix every convention. Let $\mathcal R$ be the triples of signs with product $+1$, and $\mathcal C_i$ those with product $\eta_i$, where $(\eta_1,\eta_2,\eta_3)=(+1,+1,-1)$. Set
+\[
+ r_0=c_0=(+,+,+),\qquad r_1=c_1=(+,-,-).
+\]
+Alice has $R_1,R_2,R_3,T_0,T_1$, and Bob has $C_1,C_2,C_3,U_0,U_1$. A row answer is a member of $\mathcal R$ or a flag $f$; a column answer is a member of $\mathcal C_i$ or $f$. On $T_x$ the answers are the three triples in $\mathcal C_1\setminus\{c_x\}$ and two signs. On $U_y$ they are the three triples in $\mathcal R\setminus\{r_y\}$ and two signs.
+
+On $(R_i,C_k)$ accept two flags, reject a single flag and otherwise compare the intersecting signs. On $(T_x,C_1)$ a sign matches Bob's class $\{f,c_x\}$, while a triple must match that triple. On $(R_1,U_y)$ reverse this calibration rule, using $r_y$. On $(T_x,U_y)$ two signs $s,t$ must satisfy $st=(-1)^{xy}$; if either answer is a triple, accept. Every remaining internal pair accepts every valid answer. All 25 internal pairs are sampled, including the unrestricted ones.
+
+The game $\GIII$ of \cite[Section 2]{TypeGames} consists of nine copies indexed by $j\in\Z/9\Z$ and a Bob question $\mathrm{Lab}$ with answers in $\Z/9\Z$. Besides the 225 internal pairs, add
+\[
+ (R_1^j,\mathrm{Lab}):\quad f\ \Longleftrightarrow\ \mathrm{Lab}=j,
+\]
+\[
+ (R_2^j,\mathrm{Lab}):\quad (+,+,+)\ \Longleftrightarrow\ \mathrm{Lab}\in\{j+1,j+2\}.
+\]
+There are 243 supported base pairs. All indices below are modulo nine. The flag question is named \texttt{flag} in the machine table; the symbols $U_0,U_1$ for base questions are distinct from the global group observables $U_a,U_b,U_c$.
+
+\subsection{Labels and conditional contexts}
+Retain all base questions and pairs. Add three binary Bob questions for the global signs $U_a,U_b,U_c$. For each $j$, add twelve binary Bob questions: nine cells $O_{rs}^j$ ($0\le r,s\le2$) and $Y_a^j,Y_b^j,Y_c^j$. Write $X_j=O_{00}^j$ and $Z_j=O_{11}^j$.
+
+For each of the five Alice base questions $Q$ in each copy add nine joint questions $(Q,t)$. Six contexts $t$ are the rows and columns of the auxiliary square. Their sign triples have product $+1$ on every row and the first two columns, and $-1$ on the last column. The other three contexts are the singleton signs $Y_q^j$. An answer to $(Q,t)$ contains an ordinary valid answer to $Q$ and a valid context tuple. Against each of the five original Bob questions of its copy, apply the original predicate to the ordinary coordinate. Inherit any $Q$--$\mathrm{Lab}$ link as well. Against each binary Bob question occurring in $t$, compare that coordinate of the tuple. These are all its tests.
+
+Add three Alice questions $(\mathrm{Lab},U_q)$, with answers $(j,s)$. Against Bob's $\mathrm{Lab}$ compare $j$; against his global $U_q$ compare $s$. They enforce joint measurability of the global signs and the flag partition.
+
+A conditional context specifies a block $D\subset\Z/9\Z$ and a list of binary variables. Its answers are one off-block symbol $(0)$ and the on-block tuples $(1,s_1,\ldots,s_k)$ satisfying the relation in Table~\ref{tab:contexts}. Against $\mathrm{Lab}$, the block bit must equal membership in $D$. Against each listed binary variable compare its sign on the block, and accept the off-block answer. The twelve contexts per copy are exactly the following.
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Block & Variables and relation & Number\\
+\midrule
+$\{j+1\}$ & $Z_j=+1$ & 1\\
+$\{j+2\}$ & $Z_j=-1$ & 1\\
+$\{j\}$ & $Y_q^j=U_q$, $q=a,b,c$ & 3\\
+$\{j+1\}$ & $Y_b^j=U_a$ & 1\\
+$\{j+2\}$ & $Y_b^j=U_b$ & 1\\
+$\{j+1\}$ & $Y_c^j=U_b$ & 1\\
+$\{j+2\}$ & $Y_c^j=U_a$ & 1\\
+$\{j+1,j+2\}$ & joint $Y_a^j,X_j,U_c$; $Y_a^jX_jU_c=1$ & 1\\
+$\{j+1,j+2\}$ & joint $X_j,U_a$; joint $X_j,U_b$ & 2\\
+\bottomrule
+\end{tabular}
+\caption{Conditional contexts defining $\GB$. Joint variables are required to have an on-block joint sign tuple.}\label{tab:contexts}
+\end{table}
+No context jointly measures $U_a,U_b$. The two-element block is tested as a block; its two flags are not resolved in a context containing the flag-interchanging $X_j$.
+
+This specifies $\GB$ completely. Sample uniformly from the supported pairs. Invalid answers are rejected. Unsupported pairs have weight zero and may be assigned the all-accept predicate. The question counts are
+\[
+ |X|=45+405+3+108=561,\qquad |Y|=46+3+108=157.
+\]
+The supported pairs consist of 243 base pairs, 2,187 inherited joint/base tests, 945 label matches, six global matches and 315 conditional tests, totaling 3,696. The largest answer set has $5\cdot4=20$ elements.
+
+The file \texttt{anc/labelled-giii-game.json} lists every question's valid answers and every supported pair's forbidden pairs of zero-based answer indices. It records the uniform denominator 3,696. The two checker implementations compare semantic outcomes, so the ordering of answer arrays has no mathematical significance.

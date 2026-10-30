@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "independent_of_supplied_code": true,
+  "sample_size": 512,
+  "seed": 336906185362330768646873192451346372926,
+  "losing_identities_checked": 12537,
+  "question_pvms_checked": 485,
+  "arithmetic": "exact Q(sqrt(2))",
+  "method": "local generator rewriting; Cuntz expansion to common annihilation depth; separately constructed rank-one base effects",
+  "finite_truncation": false,
+  "elapsed_seconds": 73.122,
+  "peak_working_set_bytes": 111099904,
+  "peak_commit_bytes": 103051264,
+  "game_sha256": "a5b6153d95bc636bc195fa82757c19fa18e507637f46b8efb3c98cb84943f774"
+}

@@ -1,0 +1,28 @@
+TABLE 561 157 3696 max answers 20
+PVM DONE A {'pvm_templates': 65, 'povm_questions': 561, 'pair_templates': 0, 'pairs': 0, 'forbidden_events': 0, 'losing_products': 0}
+PVM DONE B {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 0, 'pairs': 0, 'forbidden_events': 0, 'losing_products': 0}
+PAIR PROGRESS 0 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 1, 'pairs': 1, 'forbidden_events': 16, 'losing_products': 16}
+PAIR PROGRESS 500 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 383, 'pairs': 501, 'forbidden_events': 13286, 'losing_products': 10082}
+PAIR PROGRESS 1000 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 408, 'pairs': 1001, 'forbidden_events': 26869, 'losing_products': 11183}
+PAIR PROGRESS 1500 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 435, 'pairs': 1501, 'forbidden_events': 38940, 'losing_products': 12242}
+PAIR PROGRESS 2000 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 463, 'pairs': 2001, 'forbidden_events': 52210, 'losing_products': 13430}
+PAIR PROGRESS 2500 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 488, 'pairs': 2501, 'forbidden_events': 65793, 'losing_products': 14531}
+PAIR PROGRESS 3000 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 515, 'pairs': 3001, 'forbidden_events': 77864, 'losing_products': 15590}
+PAIR PROGRESS 3500 {'pvm_templates': 86, 'povm_questions': 718, 'pair_templates': 606, 'pairs': 3501, 'forbidden_events': 89022, 'losing_products': 17738}
+{
+  "pvm_templates": 86,
+  "povm_questions": 718,
+  "pair_templates": 672,
+  "pairs": 3696,
+  "forbidden_events": 90630,
+  "losing_products": 19014,
+  "peak_working_set_bytes": 381845504,
+  "peak_commit_bytes": 374697984,
+  "elapsed_seconds": 56.053,
+  "status": "PASS",
+  "exact": true,
+  "finite_truncation_used": false,
+  "arithmetic": "Q(sqrt(2)), Fraction",
+  "proof_rule": "A sigma_{-i/2}(B) = 0 in the self-similar Cuntz algebra",
+  "game_sha256": "a5b6153d95bc636bc195fa82757c19fa18e507637f46b8efb3c98cb84943f774"
+}
